@@ -19,6 +19,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SummaryFragment">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.cupcake.model.OrderViewModel"/>
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -49,6 +55,7 @@
                 <TextView
                     android:id="@+id/quantity"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
+                    android:text="@{viewModel.quantity.toString()}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
@@ -72,6 +79,7 @@
                 <TextView
                     android:id="@+id/flavor"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
+                    android:text="@{viewModel.flavor}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
@@ -95,6 +103,7 @@
                 <TextView
                     android:id="@+id/date"
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
+                    android:text="@{viewModel.date}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
@@ -111,6 +120,7 @@
                 <TextView
                     android:id="@+id/total"
                     style="@style/Widget.Cupcake.TextView.FinalPrice"
+                    android:text="@{@string/subtotal_price(viewModel.price)}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
