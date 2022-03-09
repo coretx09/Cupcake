@@ -25,3 +25,9 @@ la chaîne de modèle est ["EEE, MMM d"] analysée en ["Wed, Jul 4"]
 signifie que si l'expression de gauche n'est pas nulle, alors utilisez-la. Sinon, si l'expression à
 gauche est nulle, utilisez l'expression à droite de l'opérateur elvis
 
+# Set Lifecycle owner to observe LiveData
+[LifecycleOwner] est une classe qui a un lifecycle Android, comme une activité ou un fragment.
+[LiveData]observer observe les modifications apportées aux data de l'app uniquement si le owner du lifecycle est dans des états actifs ( STARTED ou RESUMED).
+[LiveData]observers sont les  binding expressions in layout files avec les data observable comme  price
+Avec [Data Binding], lorsqu'une valeur observable change, les éléments UI  auxquels elle est liée sont automatiquement mis à jour.
+For the UI elements to automatically update, you have to associate [binding.lifecycleOwner]
