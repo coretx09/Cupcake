@@ -31,3 +31,16 @@ gauche est nulle, utilisez l'expression à droite de l'opérateur elvis
 [LiveData]observers sont les  binding expressions in layout files avec les data observable comme  price
 Avec [Data Binding], lorsqu'une valeur observable change, les éléments UI  auxquels elle est liée sont automatiquement mis à jour.
 For the UI elements to automatically update, you have to associate [binding.lifecycleOwner]
+ 
+#LiveData transformation
+La LiveData ou les méthodes de transformation permettent d'effectuer des manipulations de données sur
+la source LiveData et de renvoyer un LiveData objet résultant. 
+En termes simples, il transforme la valeur de LiveData en une autre valeur. 
+
+[Transformations.map()]est l'une des fonctions de transformation, cette méthode prend la source LiveData et une fonction comme paramètres
+Quelques exemples en temps réel où vous pouvez utiliser une transformation LiveData :
+1. Formater les chaînes de date et d'heure pour l'affichage
+2. Trier une liste d'éléments
+3. Filtrer ou regrouper les éléments
+4. Calculez le résultat à partir d'une liste telle que la somme de tous les éléments, le nombre d'éléments, renvoyez le dernier élément, etc.
+
