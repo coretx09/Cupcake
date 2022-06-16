@@ -47,3 +47,14 @@ Quelques exemples en temps réel où vous pouvez utiliser une transformation Liv
 #Setup click listeners using listener binding
 
 #Implement Up button behavior
+
+# tasks and back stack:
+[Task] Les activités dans Android existent dans les task
+Lorsque vous ouvrez une application pour la première fois à partir de l'icône du lanceur, Android crée une nouvelle task avec votre activité principale.
+Une task est un ensemble d'activités avec lesquelles l'utilisateur interagit lors de l'exécution d'un certain travail
+
+[back stack]
+Les activités sont organisées dans une back, appelée  , back stack où chaque nouvelle activité visitée par l'utilisateur est poussée sur la back stack pour la task.
+Les activités en dessous sur la pile ont été mises en arrière-plan et ont été arrêtées.
+La back stack est utile lorsque l'utilisateur veut naviguer vers l'arrière. Android peut supprimer l'activité en cours du haut de la pile, la détruire et recommencer l'activité en dessous.
+Lorsqu'il n'y a plus d'activités dans le backstack, l'utilisateur est ramené à l'écran de lancement de l'appareil
